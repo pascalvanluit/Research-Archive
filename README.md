@@ -24,7 +24,7 @@ The folder contains:
    - modindices_cv.R: function to obtain k OOS MIs.
    - modindices_train.R: function to obtain MIs which lead to mean significant OOS chi-square fit.
       
-### Simulation study folder:
+### Simulation Study folder:
 Folder containing all scripts to run the simulation study. The simulation study can be replicated by re-running all scripts in the order as they are listed below.
 The folder contains:
    - 00_conditions.rds: data frame with conditions for simulating datasets.
