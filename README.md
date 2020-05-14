@@ -3,6 +3,8 @@
 This is the Research Archive for my Research Master Thesis titled:
 Improving Generalizability of Structural Equation Models through Cross-Validated Model Modifications
 
+The Research Archive is available at https://github.com/pascalvanluit/Research-Archive. The GitHub repository is public and open-source. The owner is Pascal van Luit (p.j.vanluit@uu.nl). 
+
 The repository contains two main folders ("Methods" and "Simulation Study") and the two following files:
   - van Luit,PJ - MSBBSS.pdf: thesis manuscript.
   - approval.pdf: ethical approval for the project.
