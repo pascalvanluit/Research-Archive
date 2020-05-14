@@ -12,6 +12,7 @@ The repository is organized as follows:
       - mod_no_adj.R: function to fit the baseline model (No Mod).
       - modindices_cv.R: function to obtain k OOS MIs.
       - modindices_train.R: function to obtain MIs which lead to mean significant OOS chi-square fit.
+      
   - Simulation study folder: Folder containing all the script to run the simulation study.
     The folder contains:
       - 00_conditions.rds: 
