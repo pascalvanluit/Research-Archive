@@ -19,6 +19,10 @@ The repository is organized as follows:
       - 00_create_conditions_grid.R: script for creating conditions grid (00_conditions.rds).
       - 01_simulation.R: script for creating simulated datasets:
       - 01_sim_data.rds: all simulated datasets.
-      - 02a_Modelling.R: script for running all 7 methods on each simulated dataset.
-      - 
-      
+      - 02_Modelling.R: script for running all 7 methods on each simulated dataset. Creating models and lavaan fit objects.
+      - 03a_Analysis.R: script for computing all MSE's of the POI and distances of modelled covariance matrices to true covariance matrix.
+      - 03b_Analysis.R: script for compiling all results from all methods.
+      - 04_Tables_and_Figures.R: script for creating all results tables and figures found in the paper.
+      - Functions folder: A folder which contains functions used in the simulation study analysis.
+          - create_true_covmat: function to create the true covariance matrix for each condition.
+          
