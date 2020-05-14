@@ -1,5 +1,4 @@
-# Research-Archive
-Research Archive for Research Master Thesis
+# Research Archive for Research Master Thesis
 
 This is the Research Archive for my Research Master Thesis titled:
 Improving Generalizability of Structural Equation Models through Cross-Validated Model Modifications
