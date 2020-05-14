@@ -7,8 +7,9 @@ The repository is organized as follows:
   - van Luit,PJ - MSBBSS.pdf: thesis manuscript.
   - approval.pdf: ethical approval for the project.
 
-## Methods folder: Folder containing all the functions used by the different SEM modification and specification methods.
-    The folder contains:
+## Methods folder:
+Folder containing all the functions used by the different SEM modification and specification methods.
+The folder contains:
    - mod_adj_chisq_cv.R: Algorithm 3
    - mod_adj_mi.R: Algorithm 1
    - mod_adj_mi_cv.R: Algorithm 2
@@ -16,8 +17,9 @@ The repository is organized as follows:
    - modindices_cv.R: function to obtain k OOS MIs.
    - modindices_train.R: function to obtain MIs which lead to mean significant OOS chi-square fit.
       
-## Simulation study folder: Folder containing all the script to run the simulation study.
-    The folder contains:
+## Simulation study folder:
+Folder containing all the script to run the simulation study.
+The folder contains:
    - 00_conditions.rds: data frame with conditions for simulating datasets.
    - 00_create_conditions_grid.R: script for creating conditions grid (00_conditions.rds).
    - 01_simulation.R: script for creating simulated datasets:
