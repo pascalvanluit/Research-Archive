@@ -15,4 +15,11 @@ The repository is organized as follows:
       
   - Simulation study folder: Folder containing all the script to run the simulation study.
     The folder contains:
-      - 00_conditions.rds: 
+      - 00_conditions.rds: data frame with conditions for simulating datasets.
+      - 00_create_conditions_grid.R: script for creating conditions grid (00_conditions.rds).
+      
+      - 01_simulation.R: script for creating simulated datasets:
+      - 01_sim_data.rds: all simulated datasets.
+      
+      - 02a_Modelling.R: script for running all 7 methods on each simulated dataset.
+      
