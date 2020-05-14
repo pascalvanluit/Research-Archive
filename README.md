@@ -6,6 +6,7 @@ Improving Generalizability of Structural Equation Models through Cross-Validated
 ## Abstract
 Structural equation modelling (SEM) is a popular modelling tool in the behavioral and social sciences. SEM models are often modified with the aid of modification indices; which are computed based on a sample dataset. This practice comes with a risk for overfitting to the sample dataset. To prevent overfitting, this paper proposes SEM model modification methods in combination with cross-validation. A simulation study is run to assess the performance of the standard modification method with the proposed cross-validation methods. Results indicate that cross-validating model modifications in SEM can be effective in obtaining a lower Mean Squared Error of estimating a parameter of interest.
 
+## Archive description
 The Research Archive is available at https://github.com/pascalvanluit/Research-Archive. The GitHub repository is public and open-source. The owner is Pascal van Luit (p.j.vanluit@uu.nl). Please contact Pascal for any questions or comments regarding the repository. A copy of this repository has been stored in the archives of Utrecht University. The data will be stored for a minimal duration of ten years.
 
 The repository contains two main folders ("Methods" and "Simulation Study") and the two following files:
@@ -13,7 +14,7 @@ The repository contains two main folders ("Methods" and "Simulation Study") and 
   - approval.pdf: ethical approval for the project.
     - This study is approved by the Ethics Committee of the Faculty of Social and Behavioural Sciences of Utrecht University, filed under number 19-222.
 
-## Methods folder:
+### Methods folder:
 Folder containing all the functions used by the different SEM modification and specification methods.
 The folder contains:
    - mod_adj_chisq_cv.R: Algorithm 3
@@ -23,7 +24,7 @@ The folder contains:
    - modindices_cv.R: function to obtain k OOS MIs.
    - modindices_train.R: function to obtain MIs which lead to mean significant OOS chi-square fit.
       
-## Simulation study folder:
+### Simulation study folder:
 Folder containing all scripts to run the simulation study. The simulation study can be replicated by re-running all scripts in the order as they are listed below.
 The folder contains:
    - 00_conditions.rds: data frame with conditions for simulating datasets.
