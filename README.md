@@ -32,7 +32,7 @@ The folder contains:
    - *Functions folder*: Folder containing functions used in the simulation study analysis.
       - create_true_covmat.R: function to create the true covariance matrix for each condition.
       - poi.R: function to find the estimated value of the parameter of interest for each iteration.
-   - *Results folder*: Folder containing the all results.
+   - *Results folder*: Folder containing all results which are used in analyses.
       - 02_results_mod_adj_chisq_cv_10.rds: results of Algorithm 3 (minimum MI = 10)
       - 02_results_mod_adj_chisq_cv_4.rds: results of Algorithm 3 (minimum MI = 4)
       - 02_results_mod_adj_mi_10.rds: results of Algorithm 1 (minimum MI = 10)
