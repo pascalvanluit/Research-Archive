@@ -24,5 +24,6 @@ The repository is organized as follows:
       - 03b_Analysis.R: script for compiling all results from all methods.
       - 04_Tables_and_Figures.R: script for creating all results tables and figures found in the paper.
       - Functions folder: A folder which contains functions used in the simulation study analysis.
-          - create_true_covmat: function to create the true covariance matrix for each condition.
+          - create_true_covmat.R: function to create the true covariance matrix for each condition.
+          - poi.R: function to find the estimated value of the parameter of interest for each iteration.
           
