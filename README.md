@@ -29,15 +29,15 @@ The folder contains:
    - 03b_Analysis.R: script for compiling all results from all methods.
    - 04_Tables_and_Figures.R: script for creating all results tables and figures found in the paper.
    - Functions folder: Folder containing functions used in the simulation study analysis.
-    - create_true_covmat.R: function to create the true covariance matrix for each condition.
-    - poi.R: function to find the estimated value of the parameter of interest for each iteration.
+      - create_true_covmat.R: function to create the true covariance matrix for each condition.
+      - poi.R: function to find the estimated value of the parameter of interest for each iteration.
    - Results folder: Folder containing the all results.
-    - 02_results_mod_adj_chisq_cv_10.rds: results of Algorithm 3 (minimum MI = 10)
-    - 02_results_mod_adj_chisq_cv_4.rds: results of Algorithm 3 (minimum MI = 4)
-    - 02_results_mod_adj_mi_10.rds: results of Algorithm 1 (minimum MI = 10)
-    - 02_results_mod_adj_mi_4.rds: results of Algorithm 1 (minimum MI = 4)
-    - 02_results_mod_adj_mi_cv_10.rds: results of Algorithm 2 (minimum MI = 10)
-    - 02_results_mod_adj_mi_cv_4.rds: results of Algorithm 2 (minimum MI = 4)
-    - 02_results_mod_no_adj.rds: results of No Mod method.
-    - all_results.rds: Results of all 7 methods.
+      - 02_results_mod_adj_chisq_cv_10.rds: results of Algorithm 3 (minimum MI = 10)
+      - 02_results_mod_adj_chisq_cv_4.rds: results of Algorithm 3 (minimum MI = 4)
+      - 02_results_mod_adj_mi_10.rds: results of Algorithm 1 (minimum MI = 10)
+      - 02_results_mod_adj_mi_4.rds: results of Algorithm 1 (minimum MI = 4)
+      - 02_results_mod_adj_mi_cv_10.rds: results of Algorithm 2 (minimum MI = 10)
+      - 02_results_mod_adj_mi_cv_4.rds: results of Algorithm 2 (minimum MI = 4)
+      - 02_results_mod_no_adj.rds: results of No Mod method.
+      - all_results.rds: Results of all 7 methods.
           
