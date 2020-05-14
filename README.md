@@ -10,7 +10,6 @@ The repository is organized as follows:
       - mod_adj_mi: Algorithm 1
       - mod_adj_mi_cv: Algorithm 2
       - mod_no_adj: function to fit the baseline model (No Mod).
-
   - Simulation study folder: Folder containing all the script to run the simulation study.
     The folder contains:
       - 
