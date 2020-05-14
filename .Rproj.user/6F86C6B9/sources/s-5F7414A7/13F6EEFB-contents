@@ -7,6 +7,12 @@ library(purrrlyr)
 library(rlist)
 library(lavaan)
 
+
+########################################################################
+## Script for computing MSE and covariance matrix distance per method ##
+########################################################################
+
+# Loading the conditions data frame:
 conditions <- read_rds("Simulation study/00_conditions.rds")
 
 # Loading the conditions rds files:
@@ -18,15 +24,6 @@ conditions_mod_adj_mi_cv_10    <- read_rds("Simulation study/Outputs/02_conditio
 conditions_mod_adj_chisq_cv_4  <- read_rds("Simulation study/Outputs/02_conditions_mod_adj_chisq_cv_4.rds")
 conditions_mod_adj_chisq_cv_10 <- read_rds("Simulation study/Outputs/02_conditions_mod_adj_chisq_cv_10.rds")
 
-
-conditions_mod_no_adj          <- read_rds("Simulation study/Outputs/02_conditions_mod_no_adj.rds")
-conditions_mod_adj_mi_10       <- read_rds("Simulation study/Outputs/Old/02_conditions_mod_adj_mi_10.rds")
-conditions <- read_rds("Simulation study/00_conditions.rds")
-
-
-            ########################################################
-            # Obtaining the estimates of the Parameter of Interest # 
-            ########################################################
 
 ##############
 # mod_no_adj #
@@ -47,9 +44,6 @@ for (i in 1:nrow(conditions_mod_no_adj)) {
     conditions_mod_no_adj$mses[[i]][[j]] <- ((conditions_mod_no_adj$pois[[i]][[j]] - conditions_mod_no_adj[i,2])^2)
   }
 }
-
-# Using a nested lapply to obtain mse of poi estimates:
-# conditions_mod_no_adj$mses <- lapply(conditions_mod_no_adj$pois, lapply, function(x) ((as.matrix(x) - conditions[,2])^2))
 
 # Using a nested lapply to obtain mean mse and CI's for each condition:
 conditions_mod_no_adj$mean_mse <- lapply(conditions_mod_no_adj$mses, function(x) mean(unlist(x), na.rm = TRUE))
@@ -74,11 +68,11 @@ conditions_mod_no_adj$mean_distcov <- lapply(conditions_mod_no_adj$distcov, func
 conditions_mod_no_adj$distcov_ci_lower <- lapply(conditions_mod_no_adj$distcov, function(x) ci(unlist(x), na.rm = TRUE)["CI lower"])
 conditions_mod_no_adj$distcov_ci_upper <- lapply(conditions_mod_no_adj$distcov, function(x) ci(unlist(x), na.rm = TRUE)["CI upper"])
 
-
 # Obtaining the relevant results:
 results_mod_no_adj <- conditions_mod_no_adj %>% select(-datasets, -outputs, -fits) %>% unnest(cols = c(mean_mse, mse_ci_lower, mse_ci_upper, mean_distcov, distcov_ci_lower, distcov_ci_upper))
 
-write_rds(results_mod_no_adj, path = "Simulation study/Results 01-05/02_results_mod_no_adj.rds")
+# Creating .rds file with all results for this method:
+write_rds(results_mod_no_adj, path = "Simulation study/Results/02_results_mod_no_adj.rds")
 
 
 ################
@@ -124,11 +118,11 @@ conditions_mod_adj_mi_4$mean_distcov <- lapply(conditions_mod_adj_mi_4$distcov, 
 conditions_mod_adj_mi_4$distcov_ci_lower <- lapply(conditions_mod_adj_mi_4$distcov, function(x) ci(unlist(x), na.rm = TRUE)["CI lower"])
 conditions_mod_adj_mi_4$distcov_ci_upper <- lapply(conditions_mod_adj_mi_4$distcov, function(x) ci(unlist(x), na.rm = TRUE)["CI upper"])
 
-
 # Obtaining the relevant results:
 results_mod_adj_mi_4 <- conditions_mod_adj_mi_4 %>% select(-datasets, -outputs, -fits) %>% unnest(cols = c(mean_mse, mse_ci_lower, mse_ci_upper, mean_distcov, distcov_ci_lower, distcov_ci_upper))
 
-write_rds(results_mod_adj_mi_4, path = "Simulation study/Results 01-05/02_results_mod_adj_mi_4.rds") 
+# Creating .rds file with all results for this method:
+write_rds(results_mod_adj_mi_4, path = "Simulation study/Results/02_results_mod_adj_mi_4.rds") 
 
 
 #################
@@ -177,7 +171,8 @@ conditions_mod_adj_mi_10$distcov_ci_upper <- lapply(conditions_mod_adj_mi_10$dis
 # Obtaining the relevant results:
 results_mod_adj_mi_10 <- conditions_mod_adj_mi_10 %>% select(-datasets, -outputs, -fits) %>% unnest(cols = c(mean_mse, mse_ci_lower, mse_ci_upper, mean_distcov, distcov_ci_lower, distcov_ci_upper))
 
-write_rds(results_mod_adj_mi_10, path = "Simulation study/Results 01-05/02_completer_results_mod_adj_mi_10.rds") 
+# Creating .rds file with all results for this method:
+write_rds(results_mod_adj_mi_10, path = "Simulation study/Results/02_completer_results_mod_adj_mi_10.rds") 
 
 
 ###################
@@ -226,7 +221,8 @@ conditions_mod_adj_mi_cv_4$distcov_ci_upper <- lapply(conditions_mod_adj_mi_cv_4
 # Obtaining the relevant results:
 results_mod_adj_mi_cv_4 <- conditions_mod_adj_mi_cv_4 %>% select(-datasets, -outputs, -fits) %>% unnest(cols = c(mean_mse, mse_ci_lower, mse_ci_upper, mean_distcov, distcov_ci_lower, distcov_ci_upper))
 
-write_rds(results_mod_adj_mi_cv_4, path = "Simulation study/Results 01-05/02_results_mod_adj_mi_cv_4.rds") 
+# Creating .rds file with all results for this method:
+write_rds(results_mod_adj_mi_cv_4, path = "Simulation study/Results/02_results_mod_adj_mi_cv_4.rds") 
 
 
 ####################
@@ -275,7 +271,8 @@ conditions_mod_adj_mi_cv_10$distcov_ci_upper <- lapply(conditions_mod_adj_mi_cv_
 # Obtaining the relevant results:
 results_mod_adj_mi_cv_10 <- conditions_mod_adj_mi_cv_10 %>% select(-datasets, -outputs, -fits) %>% unnest(cols = c(mean_mse, mse_ci_lower, mse_ci_upper, mean_distcov, distcov_ci_lower, distcov_ci_upper))
 
-write_rds(results_mod_adj_mi_cv_10, path = "Simulation study/Results 01-05/02_results_mod_adj_mi_cv_10.rds") 
+# Creating .rds file with all results for this method:
+write_rds(results_mod_adj_mi_cv_10, path = "Simulation study/Results/02_results_mod_adj_mi_cv_10.rds") 
 
 
 ######################
@@ -324,7 +321,8 @@ conditions_mod_adj_chisq_cv_4$distcov_ci_upper <- lapply(conditions_mod_adj_chis
 # Obtaining the relevant results:
 results_mod_adj_chisq_cv_4 <- conditions_mod_adj_chisq_cv_4 %>% select(-datasets, -outputs, -fits) %>% unnest(cols = c(mean_mse, mse_ci_lower, mse_ci_upper, mean_distcov, distcov_ci_lower, distcov_ci_upper))
 
-write_rds(results_mod_adj_chisq_cv_4, path = "Simulation study/Results 01-05/02_results_mod_adj_chisq_cv_4.rds") 
+# Creating .rds file with all results for this method:
+write_rds(results_mod_adj_chisq_cv_4, path = "Simulation study/Results/02_results_mod_adj_chisq_cv_4.rds") 
 
 
 #######################
@@ -373,4 +371,5 @@ conditions_mod_adj_chisq_cv_10$distcov_ci_upper <- lapply(conditions_mod_adj_chi
 # Obtaining the relevant results:
 results_mod_adj_chisq_cv_10 <- conditions_mod_adj_chisq_cv_10 %>% select(-datasets, -outputs, -fits) %>% unnest(cols = c(mean_mse, mse_ci_lower, mse_ci_upper, mean_distcov, distcov_ci_lower, distcov_ci_upper))
 
-write_rds(results_mod_adj_chisq_cv_10, path = "Simulation study/Results 01-05/02_results_mod_adj_chisq_cv_10.rds")
+# Creating .rds file with all results for this method:
+write_rds(results_mod_adj_chisq_cv_10, path = "Simulation study/Results/02_results_mod_adj_chisq_cv_10.rds")
