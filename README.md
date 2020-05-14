@@ -3,7 +3,7 @@
 This is the Research Archive for my Research Master Thesis titled:
 Improving Generalizability of Structural Equation Models through Cross-Validated Model Modifications
 
-The repository is organized as follows:
+The repository contains two main folders ("Methods" and "Simulation Study") and the two following files:
   - van Luit,PJ - MSBBSS.pdf: thesis manuscript.
   - approval.pdf: ethical approval for the project.
     - This study is approved by the Ethics Committee of the Faculty of Social and Behavioural Sciences of Utrecht University, filed under number 19-222.
