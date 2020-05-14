@@ -6,6 +6,7 @@ Improving Generalizability of Structural Equation Models through Cross-Validated
 The repository is organized as follows:
   - van Luit,PJ - MSBBSS.pdf: thesis manuscript.
   - approval.pdf: ethical approval for the project.
+    - This study is approved by the Ethics Committee of the Faculty of Social and Behavioural Sciences of Utrecht University, filed under number 19-222.
 
 ## Methods folder:
 Folder containing all the functions used by the different SEM modification and specification methods.
